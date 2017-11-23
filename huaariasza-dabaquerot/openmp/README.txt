@@ -1,46 +1,40 @@
-Aplicacion Blur-effect
+Blur-effect application
 
-Para utilizar la aplicación es necesario instalar OpenCV
+Before start you need to install OpenCV
 
 https://docs.opencv.org/trunk/d7/d9f/tutorial_linux_install.html
 
-una vez instalado el comando de compilación es el siguiente
+once you have everything installed you can proceed to the compilationas described bellow
 
-g++ -I/usr/include/opencv -I/usr/include/opencv2 -L/usr/local/lib/ -g -o bluromp blur-openmp.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching -fopenmp --std=c++11  
+g++ -I/usr/include/opencv -I/usr/include/opencv2 -L/usr/local/lib/ -g -o bluromp blur-openmp.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching -fopenmp --std=c++11   
 
-Siendo 
+g++ el compiler to use
+bluromp executable name 
+blur-openmp.cpp program to make the blur effect
+-fopenmp command to use openmp libraries
+--std=c++11 command to use the last version of c++
 
-g++ el compilador a utilizar
-bluromp nombre del ejecutable a generar
-blur-openmp.cpp programa que realiza el efecto de blur
--fopenmp comando para usar las librerías de openmp
---std=c++11 comando para utilizar la última versión de c++
-
-ejecutar aplicación 
+Execute the application
 
 ./bluromp mario720.jpg 3 2 1
 
-siendo
+bluromp executable name
+mario720.jpg image name (inside img folder)
+3 kernel size
+2 number of threads
+1 variable to change to test mode (if it is equal to 0 the output image will be displayed, in other case only performance data will be displayed)
 
-bluromp nombre del ejecutable a generado
-mario720.jpg nombre de la imágen (debe estar en el mismo directorio)
-3 tamaño del kernel a utilizar en el efecto de blur
-2 número de hilos a lanzar para hacer el cálculo del efecto de blur
-1 variable para cambiar a modo de prueba (si es 0 se verá la imágen resultante, si es uno solo se verán los datos de desempeño)
-
-este programa mostrará en consola algo como lo que se muestra a continuación
+performance data looks like the example bellow
 
 1280x720	2	5	475,708 ms
 
-siendo
+1280x720 image size
+2 number of threads
+5 kernel size
+475,708 ms execution time
 
-1280x720 tamaño de la imágen
-2 número de hilos
-5 tamaño del kernel
-475,708 ms tiempo de ejecución
-
-Para ver el rendimiento general basta con ejecutar el archivo script_ejecutar_todo.sh, con el comando 
+To evaluate the overall performance you just have to execute the script_ejecutar_todo.sh file, using the command
 
 sh ./script_ejecutar_todo.sh
 
-al finalizar en el archivo timeopenmp.txt se generará una lista con el rendimiento para diferentes imágenes, número de hilos y tamaños de kernel.
+Once it finishes in the timeopenmp.txt file a list with the performance for diferent images, number of threads and kernel sizes will be generated.

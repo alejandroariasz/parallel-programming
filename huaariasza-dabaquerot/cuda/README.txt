@@ -1,26 +1,26 @@
-Aplicacion Blur-effect
+Blur-effect application
 
-Para utilizar la aplicación es necesario instalar OpenCV
+Before start you need to install OpenCV
 
 https://docs.opencv.org/trunk/d7/d9f/tutorial_linux_install.html
 
-e instalar cuda
+and cuda
 
 http://www.nvidia.es/object/cuda-parallel-computing-es.html
 
-una vez instalados los programas necesarios el comando de compilación es el siguiente
+once you have everything installed you can proceed to the compilationas described bellow
 
 make
 
-El makefile tiene configurada la compilación del programa, sin embargo este programa depende de la instalación de cuda en la cuál se tiene en cuenta la arquitectura del sistema operativo y de la GPU, por lo tanto puede no funcionar en otros equipos, para realizar los ajustes necesarios y lograr correr el programa:
+Inside the folder there is a makefile with the compilation of the program, take into account that this program depends on the cuda instalation where you have to set the operative system and GPU architecture so the compilation may not work on other computer, to config your pc do the following:
 
-1 Entrar a la carpeta de instalación de cuda, tomar el makefile de alguno de los ejemplos y reemplazar el makefile utilizado.
+1 Go to the installation folder of cuda, copy a makefile from one of the examples and replace the one that is inside of the folder cuda of the project.
 
-2 ajustar la ruta de instalación de cuda (CUDA_PATH), esta variable debe tener una ruta absoluta, a continuación se muestra un ejemplo de dicha ruta:
+2 set the installation path of cuda (CUDA_PATH), this variable have to be and absolute path, like the example bellow:
 
 CUDA_PATH ?= /usr/local/cuda-9.0
 
-2 Reemplazar el segmento de compilación:
+3 Replace the compilation segment:
 
 # Target rules
 all: build
@@ -49,41 +49,35 @@ clean:
 
 clobber: clean
 
-El segmento de compilación debe indicar los archivos de salida y las librerías a importar. 
+the compilation segment must indicate the output files and the libraries to import. 
 
-Siendo 
+blur-cuda executable name 
+blur-cuda.cu program to make the blur effect
+--std=c++11 command to use the last version of c++
 
-blur-cuda nombre del ejecutable a generar
-blur-cuda.cu programa que realiza el efecto de blur
---std=c++11 comando para utilizar la última versión de c++
-
-ejecutar aplicación 
+Execute the application
 
 ./blur-cuda mario720.jpg 3 256 1 1
 
-siendo
+blur-cuda executable name
+mario720.jpg image name (inside img folder)
+3 kernel size
+256 number of threads
+1 number of blocks of the GPU
+1 variable to change to test mode (if it is equal to 0 the output image will be displayed, in other case only performance data will be displayed)
 
-blur nombre del ejecutable a generado
-mario720.jpg nombre de la imágen (debe estar en el mismo directorio)
-3 tamaño del kernel a utilizar en el efecto de blur
-256 número de hilos a lanzar para hacer el cálculo del efecto de blur
-1 número de bloques a utilizar en la GPU
-1 variable para cambiar a modo de prueba (si es 0 se verá la imágen resultante, si es uno solo se verán los datos de desempeño)
-
-este programa mostrará en consola algo como lo que se muestra a continuación
+performance data looks like the example bellow
 
 1280x720	256	1	3	5766.91 ms
 
-siendo
+1280x720 image size
+256 number of threads
+1 number of blocks
+3 kernel size
+5766.91 ms execution time
 
-1280x720 tamaño de la imágen
-256 número de hilos
-1 Número de bloques
-3 tamaño del kernel
-5766.91 ms tiempo de ejecución
-
-Para ver el rendimiento general basta con ejecutar el archivo script_ejecutar_todo.sh, con el comando 
+To evaluate the overall performance you just have to execute the script_ejecutar_todo.sh file, using the command
 
 sh ./script_ejecutar_todo.sh
 
-al finalizar en el archivo timeocuda.txt se generará una lista con el rendimiento para diferentes imágenes, número de hilos, número de bloques y tamaños de kernel.
+Once it finishes in the timecuda.txt file a list with the performance for diferent images, number of threads, number of blocks and kernel sizes will be generated.
