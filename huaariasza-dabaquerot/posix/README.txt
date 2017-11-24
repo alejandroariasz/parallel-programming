@@ -25,13 +25,12 @@ mario720.jpg image name (inside img folder)
 
 performance data looks like the example bellow
 
-1280x720	2	5	475,708 ms	462,855 ms
+1280x720	2	5	475,708 ms
 
 1280x720 image size
 2 number of threads
 5 kernel size
 475,708 ms execution time
-462,855 ms execution time without taking into account partitioning time
 
 To evaluate the overall performance you just have to execute the script_ejecutar_todo.sh file, using the command
 

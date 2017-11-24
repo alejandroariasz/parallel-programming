@@ -29,7 +29,7 @@ mario720.jpg nombre de la imágen (debe estar en el directorio img)
 
 este programa mostrará en consola algo como lo que se muestra a continuación
 
-1280x720	2	5	475,708 ms	462,855 ms
+1280x720	2	5	475,708 ms
 
 siendo
 
@@ -37,7 +37,6 @@ siendo
 2 número de hilos
 5 tamaño del kernel
 475,708 ms tiempo de ejecución
-462,855 ms tiempo de ejecución sin tener en cuenta el tiempo de particionado
 
 el programa anterior se utiliza para cálculos de rendimiento por lo cual no muestra la imágen generada, para ver dicha imágen se puede conpilar el programa main.cpp y realizar la ejecución igual que con blur-effect.cpp
 
