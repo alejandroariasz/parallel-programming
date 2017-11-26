@@ -272,6 +272,19 @@ void make_blur(const cv::Mat& input, cv::Mat& output)
 
 int main(int argc, char** argv)
 {
+	//if there was an error with the input parameters
+	if(argc != 5)
+	{
+		cout << "Missing or incorrect input parameters" << endl;
+		cout << "Params:" << endl;
+		cout << "1. image name: example mario.jpg" << endl;
+		cout << "2. kernel: size odd number example: 17" << endl;
+		cout << "3. threads: number of gpu threads that will be used example: 192";
+		cout << "4. block2: number of gpu blocks that will be used example: 2";
+		cout << "5. is testing: 0 to display images 1 to enable testing mode";
+		return 0;
+	}
+
 	//variable to store input image name
 	char* image_name = (char *)malloc(sizeof(char) * 256);
 
