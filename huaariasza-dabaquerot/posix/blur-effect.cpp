@@ -148,6 +148,18 @@ void *wait(void *block)
 
 int main(int argc, char** argv)
 {
+	//if there was an error with the input parameters
+	if(argc != 4)
+	{
+		cout << "Missing or incorrect input parameters" << endl;
+		cout << "Params:" << endl;
+		cout << "1. image name example: mario.jpg" << endl;
+		cout << "2. kernel size odd number example: 17" << endl;
+		cout << "3. threads number of posix threads that will be used example: 8";
+		cout << "4. is testing 0 to display images 1 to enable testing mode";
+		return 0;
+	}
+
 	//flag to set testing mode(not display image)
 	int isTesting = 0;
 
