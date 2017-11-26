@@ -277,7 +277,7 @@ int main(int argc, char** argv)
 	vector < Mat > bluredImages;
 
 	//destroy threads
-	pthread_attr_destroy(&attr);
+	//pthread_attr_destroy(&attr);
 
 	//iterate over threads responses to store each block with blur effect
 	for (unsigned i = 0; i < blockImages.size(); i++)
