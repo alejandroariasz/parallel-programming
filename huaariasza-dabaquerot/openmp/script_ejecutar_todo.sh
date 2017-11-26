@@ -12,6 +12,8 @@ wait
 wait
 ./bluromp mario720.jpg 5 1 1 >> timeomp.txt 
 wait
+./bluromp mario720.jpg 9 1 1 >> timeomp.txt 
+wait
 ./bluromp mario720.jpg 13 1 1 >> timeomp.txt 
 wait
 ./bluromp mario720.jpg 15 1 1 >> timeomp.txt 
@@ -20,6 +22,8 @@ wait
 ./bluromp mario720.jpg 3 2 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 5 2 1 >> timeomp.txt
+wait
+./bluromp mario720.jpg 9 2 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 13 2 1 >> timeomp.txt
 wait
@@ -30,6 +34,8 @@ wait
 wait
 ./bluromp mario720.jpg 5 4 1 >> timeomp.txt
 wait
+./bluromp mario720.jpg 9 4 1 >> timeomp.txt
+wait
 ./bluromp mario720.jpg 13 4 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 15 4 1 >> timeomp.txt
@@ -39,6 +45,8 @@ wait
 wait
 ./bluromp mario720.jpg 5 8 1 >> timeomp.txt
 wait
+./bluromp mario720.jpg 9 8 1 >> timeomp.txt
+wait
 ./bluromp mario720.jpg 13 8 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 15 8 1 >> timeomp.txt
@@ -47,6 +55,8 @@ wait
 ./bluromp mario720.jpg 3 16 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 5 16 1 >> timeomp.txt
+wait
+./bluromp mario720.jpg 9 16 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 13 16 1 >> timeomp.txt
 wait
@@ -57,6 +67,8 @@ wait
 wait
 ./bluromp mario720.jpg 5 1 1 >> timeomp.txt 
 wait
+./bluromp mario720.jpg 9 1 1 >> timeomp.txt 
+wait
 ./bluromp mario720.jpg 13 1 1 >> timeomp.txt 
 wait
 ./bluromp mario720.jpg 15 1 1 >> timeomp.txt 
@@ -65,6 +77,8 @@ wait
 ./bluromp mario720.jpg 3 2 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 5 2 1 >> timeomp.txt
+wait
+./bluromp mario720.jpg 9 2 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 13 2 1 >> timeomp.txt
 wait
@@ -75,6 +89,8 @@ wait
 wait
 ./bluromp mario720.jpg 5 4 1 >> timeomp.txt
 wait
+./bluromp mario720.jpg 9 4 1 >> timeomp.txt
+wait
 ./bluromp mario720.jpg 13 4 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 15 4 1 >> timeomp.txt
@@ -84,6 +100,8 @@ wait
 wait
 ./bluromp mario720.jpg 5 8 1 >> timeomp.txt
 wait
+./bluromp mario720.jpg 9 8 1 >> timeomp.txt
+wait
 ./bluromp mario720.jpg 13 8 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 15 8 1 >> timeomp.txt
@@ -92,6 +110,8 @@ wait
 ./bluromp mario720.jpg 3 16 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 5 16 1 >> timeomp.txt
+wait
+./bluromp mario720.jpg 9 16 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 13 16 1 >> timeomp.txt
 wait
@@ -102,50 +122,7 @@ wait
 wait
 ./bluromp mario720.jpg 5 1 1 >> timeomp.txt 
 wait
-./bluromp mario720.jpg 13 1 1 >> timeomp.txt 
-wait
-./bluromp mario720.jpg 15 1 1 >> timeomp.txt 
-wait
-
-./bluromp mario720.jpg 3 2 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 5 2 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 13 2 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 15 2 1 >> timeomp.txt
-wait
-
-./bluromp mario720.jpg 3 4 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 5 4 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 13 4 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 15 4 1 >> timeomp.txt
-wait
-
-./bluromp mario720.jpg 3 8 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 5 8 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 13 8 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 15 8 1 >> timeomp.txt
-wait
-
-./bluromp mario720.jpg 3 16 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 5 16 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 13 16 1 >> timeomp.txt
-wait
-./bluromp mario720.jpg 15 16 1 >> timeomp.txt
-wait
-
-./bluromp mario720.jpg 3 1 1 >> timeomp.txt 
-wait
-./bluromp mario720.jpg 5 1 1 >> timeomp.txt 
+./bluromp mario720.jpg 9 1 1 >> timeomp.txt 
 wait
 ./bluromp mario720.jpg 13 1 1 >> timeomp.txt 
 wait
@@ -156,6 +133,8 @@ wait
 wait
 ./bluromp mario720.jpg 5 2 1 >> timeomp.txt
 wait
+./bluromp mario720.jpg 9 2 1 >> timeomp.txt
+wait
 ./bluromp mario720.jpg 13 2 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 15 2 1 >> timeomp.txt
@@ -164,6 +143,8 @@ wait
 ./bluromp mario720.jpg 3 4 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 5 4 1 >> timeomp.txt
+wait
+./bluromp mario720.jpg 9 4 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 13 4 1 >> timeomp.txt
 wait
@@ -174,6 +155,8 @@ wait
 wait
 ./bluromp mario720.jpg 5 8 1 >> timeomp.txt
 wait
+./bluromp mario720.jpg 9 8 1 >> timeomp.txt
+wait
 ./bluromp mario720.jpg 13 8 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 15 8 1 >> timeomp.txt
@@ -182,6 +165,8 @@ wait
 ./bluromp mario720.jpg 3 16 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 5 16 1 >> timeomp.txt
+wait
+./bluromp mario720.jpg 9 16 1 >> timeomp.txt
 wait
 ./bluromp mario720.jpg 13 16 1 >> timeomp.txt
 wait
@@ -194,6 +179,8 @@ wait
 wait
 ./bluromp mario.jpg 5 1 1 >> timeomp.txt
 wait
+./bluromp mario.jpg 9 1 1 >> timeomp.txt
+wait
 ./bluromp mario.jpg 13 1 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 15 1 1 >> timeomp.txt
@@ -202,6 +189,8 @@ wait
 ./bluromp mario.jpg 3 2 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 5 2 1 >> timeomp.txt
+wait
+./bluromp mario.jpg 9 2 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 13 2 1 >> timeomp.txt
 wait
@@ -212,6 +201,8 @@ wait
 wait
 ./bluromp mario.jpg 5 4 1 >> timeomp.txt
 wait
+./bluromp mario.jpg 9 4 1 >> timeomp.txt
+wait
 ./bluromp mario.jpg 13 4 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 15 4 1 >> timeomp.txt
@@ -221,6 +212,8 @@ wait
 wait
 ./bluromp mario.jpg 5 8 1 >> timeomp.txt
 wait
+./bluromp mario.jpg 9 8 1 >> timeomp.txt
+wait
 ./bluromp mario.jpg 13 8 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 15 8 1 >> timeomp.txt
@@ -229,6 +222,8 @@ wait
 ./bluromp mario.jpg 3 16 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 5 16 1 >> timeomp.txt
+wait
+./bluromp mario.jpg 9 16 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 13 16 1 >> timeomp.txt
 wait
@@ -239,6 +234,8 @@ wait
 wait
 ./bluromp mario.jpg 5 1 1 >> timeomp.txt
 wait
+./bluromp mario.jpg 9 1 1 >> timeomp.txt
+wait
 ./bluromp mario.jpg 13 1 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 15 1 1 >> timeomp.txt
@@ -247,6 +244,8 @@ wait
 ./bluromp mario.jpg 3 2 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 5 2 1 >> timeomp.txt
+wait
+./bluromp mario.jpg 9 2 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 13 2 1 >> timeomp.txt
 wait
@@ -257,6 +256,8 @@ wait
 wait
 ./bluromp mario.jpg 5 4 1 >> timeomp.txt
 wait
+./bluromp mario.jpg 9 4 1 >> timeomp.txt
+wait
 ./bluromp mario.jpg 13 4 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 15 4 1 >> timeomp.txt
@@ -266,6 +267,8 @@ wait
 wait
 ./bluromp mario.jpg 5 8 1 >> timeomp.txt
 wait
+./bluromp mario.jpg 9 8 1 >> timeomp.txt
+wait
 ./bluromp mario.jpg 13 8 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 15 8 1 >> timeomp.txt
@@ -274,6 +277,8 @@ wait
 ./bluromp mario.jpg 3 16 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 5 16 1 >> timeomp.txt
+wait
+./bluromp mario.jpg 9 16 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 13 16 1 >> timeomp.txt
 wait
@@ -284,50 +289,7 @@ wait
 wait
 ./bluromp mario.jpg 5 1 1 >> timeomp.txt
 wait
-./bluromp mario.jpg 13 1 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 15 1 1 >> timeomp.txt
-wait
-
-./bluromp mario.jpg 3 2 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 5 2 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 13 2 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 15 2 1 >> timeomp.txt
-wait
-
-./bluromp mario.jpg 3 4 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 5 4 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 13 4 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 15 4 1 >> timeomp.txt
-wait
-
-./bluromp mario.jpg 3 8 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 5 8 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 13 8 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 15 8 1 >> timeomp.txt
-wait
-
-./bluromp mario.jpg 3 16 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 5 16 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 13 16 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 15 16 1 >> timeomp.txt
-wait
-
-./bluromp mario.jpg 3 1 1 >> timeomp.txt
-wait
-./bluromp mario.jpg 5 1 1 >> timeomp.txt
+./bluromp mario.jpg 9 1 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 13 1 1 >> timeomp.txt
 wait
@@ -338,6 +300,8 @@ wait
 wait
 ./bluromp mario.jpg 5 2 1 >> timeomp.txt
 wait
+./bluromp mario.jpg 9 2 1 >> timeomp.txt
+wait
 ./bluromp mario.jpg 13 2 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 15 2 1 >> timeomp.txt
@@ -346,6 +310,8 @@ wait
 ./bluromp mario.jpg 3 4 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 5 4 1 >> timeomp.txt
+wait
+./bluromp mario.jpg 9 4 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 13 4 1 >> timeomp.txt
 wait
@@ -356,6 +322,8 @@ wait
 wait
 ./bluromp mario.jpg 5 8 1 >> timeomp.txt
 wait
+./bluromp mario.jpg 9 8 1 >> timeomp.txt
+wait
 ./bluromp mario.jpg 13 8 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 15 8 1 >> timeomp.txt
@@ -364,6 +332,8 @@ wait
 ./bluromp mario.jpg 3 16 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 5 16 1 >> timeomp.txt
+wait
+./bluromp mario.jpg 9 16 1 >> timeomp.txt
 wait
 ./bluromp mario.jpg 13 16 1 >> timeomp.txt
 wait
@@ -376,6 +346,8 @@ wait
 wait
 ./bluromp mario4k.jpg 5 1 1 >> timeomp.txt
 wait
+./bluromp mario4k.jpg 9 1 1 >> timeomp.txt
+wait
 ./bluromp mario4k.jpg 13 1 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 15 1 1 >> timeomp.txt
@@ -384,6 +356,8 @@ wait
 ./bluromp mario4k.jpg 3 2 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 5 2 1 >> timeomp.txt
+wait
+./bluromp mario4k.jpg 9 2 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 13 2 1 >> timeomp.txt
 wait
@@ -394,6 +368,8 @@ wait
 wait
 ./bluromp mario4k.jpg 5 4 1 >> timeomp.txt
 wait
+./bluromp mario4k.jpg 9 4 1 >> timeomp.txt
+wait
 ./bluromp mario4k.jpg 13 4 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 15 4 1 >> timeomp.txt
@@ -403,6 +379,8 @@ wait
 wait
 ./bluromp mario4k.jpg 5 8 1 >> timeomp.txt
 wait
+./bluromp mario4k.jpg 9 8 1 >> timeomp.txt
+wait
 ./bluromp mario4k.jpg 13 8 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 15 8 1 >> timeomp.txt
@@ -411,6 +389,8 @@ wait
 ./bluromp mario4k.jpg 3 16 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 5 16 1 >> timeomp.txt
+wait
+./bluromp mario4k.jpg 9 16 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 13 16 1 >> timeomp.txt
 wait
@@ -421,6 +401,8 @@ wait
 wait
 ./bluromp mario4k.jpg 5 1 1 >> timeomp.txt
 wait
+./bluromp mario4k.jpg 9 1 1 >> timeomp.txt
+wait
 ./bluromp mario4k.jpg 13 1 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 15 1 1 >> timeomp.txt
@@ -429,6 +411,8 @@ wait
 ./bluromp mario4k.jpg 3 2 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 5 2 1 >> timeomp.txt
+wait
+./bluromp mario4k.jpg 9 2 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 13 2 1 >> timeomp.txt
 wait
@@ -439,6 +423,8 @@ wait
 wait
 ./bluromp mario4k.jpg 5 4 1 >> timeomp.txt
 wait
+./bluromp mario4k.jpg 9 4 1 >> timeomp.txt
+wait
 ./bluromp mario4k.jpg 13 4 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 15 4 1 >> timeomp.txt
@@ -448,6 +434,8 @@ wait
 wait
 ./bluromp mario4k.jpg 5 8 1 >> timeomp.txt
 wait
+./bluromp mario4k.jpg 9 8 1 >> timeomp.txt
+wait
 ./bluromp mario4k.jpg 13 8 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 15 8 1 >> timeomp.txt
@@ -456,6 +444,8 @@ wait
 ./bluromp mario4k.jpg 3 16 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 5 16 1 >> timeomp.txt
+wait
+./bluromp mario4k.jpg 9 16 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 13 16 1 >> timeomp.txt
 wait
@@ -466,50 +456,7 @@ wait
 wait
 ./bluromp mario4k.jpg 5 1 1 >> timeomp.txt
 wait
-./bluromp mario4k.jpg 13 1 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 15 1 1 >> timeomp.txt
-wait
-
-./bluromp mario4k.jpg 3 2 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 5 2 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 13 2 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 15 2 1 >> timeomp.txt
-wait
-
-./bluromp mario4k.jpg 3 4 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 5 4 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 13 4 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 15 4 1 >> timeomp.txt
-wait
-
-./bluromp mario4k.jpg 3 8 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 5 8 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 13 8 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 15 8 1 >> timeomp.txt
-wait
-
-./bluromp mario4k.jpg 3 16 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 5 16 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 13 16 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 15 16 1 >> timeomp.txt
-wait
-
-./bluromp mario4k.jpg 3 1 1 >> timeomp.txt
-wait
-./bluromp mario4k.jpg 5 1 1 >> timeomp.txt
+./bluromp mario4k.jpg 9 1 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 13 1 1 >> timeomp.txt
 wait
@@ -520,6 +467,8 @@ wait
 wait
 ./bluromp mario4k.jpg 5 2 1 >> timeomp.txt
 wait
+./bluromp mario4k.jpg 9 2 1 >> timeomp.txt
+wait
 ./bluromp mario4k.jpg 13 2 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 15 2 1 >> timeomp.txt
@@ -528,6 +477,8 @@ wait
 ./bluromp mario4k.jpg 3 4 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 5 4 1 >> timeomp.txt
+wait
+./bluromp mario4k.jpg 9 4 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 13 4 1 >> timeomp.txt
 wait
@@ -538,6 +489,8 @@ wait
 wait
 ./bluromp mario4k.jpg 5 8 1 >> timeomp.txt
 wait
+./bluromp mario4k.jpg 9 8 1 >> timeomp.txt
+wait
 ./bluromp mario4k.jpg 13 8 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 15 8 1 >> timeomp.txt
@@ -547,8 +500,11 @@ wait
 wait
 ./bluromp mario4k.jpg 5 16 1 >> timeomp.txt
 wait
+./bluromp mario4k.jpg 9 16 1 >> timeomp.txt
+wait
 ./bluromp mario4k.jpg 13 16 1 >> timeomp.txt
 wait
 ./bluromp mario4k.jpg 15 16 1 >> timeomp.txt
 wait
+
 

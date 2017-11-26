@@ -217,8 +217,10 @@ void make_blur(const cv::Mat& input, cv::Mat& output)
 
 	//End Region
 
+	int threads_per_block = threads / blocks_per_grid;
+
 	//launch the blur conversion kernel
-	blur_img_kernel<<<blocks_per_grid, threads>>>(d_red, d_green, d_blue, d_edited, cols, rows, kernel, blockSize);
+	blur_img_kernel<<<blocks_per_grid, threads_per_block>>>(d_red, d_green, d_blue, d_edited, cols, rows, kernel, blockSize);
 
 	//synchronize tu check errors in any kernel
 	SAFE_CALL(cudaDeviceSynchronize(), "Kernel Launch Failed");
