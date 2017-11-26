@@ -279,9 +279,9 @@ int main(int argc, char** argv)
 		cout << "Params:" << endl;
 		cout << "1. image name: example mario.jpg" << endl;
 		cout << "2. kernel: size odd number example: 17" << endl;
-		cout << "3. threads: number of gpu threads that will be used example: 192";
-		cout << "4. block2: number of gpu blocks that will be used example: 2";
-		cout << "5. is testing: 0 to display images 1 to enable testing mode";
+		cout << "3. threads: number of gpu threads that will be used example: 192" << endl;
+		cout << "4. block2: number of gpu blocks that will be used example: 2" << endl;
+		cout << "5. is testing: 0 to display images 1 to enable testing mode" << endl;
 		return 0;
 	}
 

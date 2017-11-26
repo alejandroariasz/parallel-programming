@@ -149,14 +149,14 @@ void *wait(void *block)
 int main(int argc, char** argv)
 {
 	//if there was an error with the input parameters
-	if(argc != 4)
+	if(argc != 5)
 	{
 		cout << "Missing or incorrect input parameters" << endl;
 		cout << "Params:" << endl;
 		cout << "1. image name example: mario.jpg" << endl;
 		cout << "2. kernel size odd number example: 17" << endl;
-		cout << "3. threads number of posix threads that will be used example: 8";
-		cout << "4. is testing 0 to display images 1 to enable testing mode";
+		cout << "3. threads number of posix threads that will be used example: 8" << endl;
+		cout << "4. is testing 0 to display images 1 to enable testing mode" << endl;
 		return 0;
 	}
 
@@ -211,7 +211,7 @@ int main(int argc, char** argv)
 
 		//variables to store edges of the block adding half of the kernel in each side
 		int startRect = 0;
-		int endREct = 0;
+		int endRect = 0;
 
 		for (int i = 0; i < input.rows; i = i + input.rows / blocks)
         	{
@@ -224,11 +224,7 @@ int main(int argc, char** argv)
             		//if block is not at the beggining add half of the kernel
 			if(i > 0) startRect = i - kernelDiff;
 
-			//if block is not at the end add half of the kernel
-			if(i + input.rows / blocks < input.rows) 
-				endRect = blockheigth + kernelDiff;
-			else
-				endRect = input.rows;
+			endRect = blockheigth + kernelDiff;
 
 			//new rect of the block + kernel size
 			cv::Rect rect = cv::Rect(0, startRect, input.cols, endRect);
