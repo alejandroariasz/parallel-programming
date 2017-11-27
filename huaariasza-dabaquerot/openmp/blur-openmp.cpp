@@ -181,8 +181,7 @@ int main(int argc, char** argv)
 		//variable to add half of the kernel in each side of the block
 		int kernelDiff = (kernel_size - 1) / 2;
 		
-		//variables to store edges of the block adding half of the kernel in each side
-		int startRect = 0;
+		//variable to store the edges of the block adding half of the kernel
 		int endRect = 0;
 
 		//iterate over the image incrementing by the size of each block
@@ -195,12 +194,12 @@ int main(int argc, char** argv)
 				blockheigth = ceil(input.rows / blocks);
 
 			//if block is not at the beggining add half of the kernel
-			if(i > 0) startRect = i - kernelDiff;
+			if(i > 0) i = i - kernelDiff;
 
 			endRect = blockheigth + kernelDiff;
 			
 			//new rect of the block + kernel size
-			cv::Rect rect = cv::Rect(0, startRect, input.cols, endRect);
+			cv::Rect rect = cv::Rect(0, i, input.cols, endRect);
 			
 			//add block to block images
 			blockImages.push_back(cv::Mat(input, rect));
