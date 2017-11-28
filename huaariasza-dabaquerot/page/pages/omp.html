@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Parallel Programming - Blur Effect</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Parallel Programming - Blur Effect</a>
+            </div>
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Algorithm</a>
+                        </li>
+                        <li>
+                            <a href="partitioning.html"><i class="fa fa-dashboard fa-fw"></i> Partitioning</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Tables<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="sequential.html">Sequential Data</a>
+                                </li>
+                                <li>
+                                    <a href="posix.html">POSIX Data</a>
+                                </li>
+                                <li>
+                                    <a href="omp.html">OMP Data</a>
+                                </li>
+                                <li>
+                                    <a href="tables.html">CUDA Data</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Tables</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            OpenMP Data
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th style="font-size:10px">Size</th>
+                                        <th style="font-size:10px">Threads</th>
+                                        <th style="font-size:10px">Kernel</th>
+                                        <th style="font-size:10px">Time 1 (ms)</th>
+                                        <th style="font-size:10px">Time 2 (ms)</th>
+                                        <th style="font-size:10px">Time 3 (ms)</th>
+                                        <th style="font-size:10px">Average Time (ms)</th>
+                                        <th style="font-size:10px">Speedup</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                                <td>1280x720</td>
+                                                <td>1</td>
+                                                <td>3</td>
+                                                <td>239,506</td>
+                                                <td>240,420</td>
+                                                <td>246,845</td>
+                                                <td>242,257</td>
+                                                <td>1,000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>1</td>
+                                                <td>5</td>
+                                                <td>513,990</td>
+                                                <td>475,179</td>
+                                                <td>475,186</td>
+                                                <td>488,118</td>
+                                                <td>1,000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>1</td>
+                                                <td>9</td>
+                                                <td>1.317,030</td>
+                                                <td>1.318,850</td>
+                                                <td>1.322,420</td>
+                                                <td>1.319,433</td>
+                                                <td>1,000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>1</td>
+                                                <td>13</td>
+                                                <td>2.878,320</td>
+                                                <td>2.869,500</td>
+                                                <td>2.874,110</td>
+                                                <td>2.873,977</td>
+                                                <td>1,000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>1</td>
+                                                <td>15</td>
+                                                <td>3.889,830</td>
+                                                <td>3.810,930</td>
+                                                <td>3.801,870</td>
+                                                <td>3.834,210</td>
+                                                <td>1,000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>374,066</td>
+                                                <td>390,476</td>
+                                                <td>376,615</td>
+                                                <td>380,386</td>
+                                                <td>0,637
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>2</td>
+                                                <td>5</td>
+                                                <td>554,762</td>
+                                                <td>553,350</td>
+                                                <td>552,064</td>
+                                                <td>553,392</td>
+                                                <td>0,882
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>2</td>
+                                                <td>9</td>
+                                                <td>2.321,530</td>
+                                                <td>1.456,960</td>
+                                                <td>1.457,330</td>
+                                                <td>1.745,273</td>
+                                                <td>0,756
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>2</td>
+                                                <td>13</td>
+                                                <td>3.158,130</td>
+                                                <td>3.134,870</td>
+                                                <td>4.204,560</td>
+                                                <td>3.499,187</td>
+                                                <td>0,821
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>2</td>
+                                                <td>15</td>
+                                                <td>4.146,980</td>
+                                                <td>4.371,900</td>
+                                                <td>4.126,400</td>
+                                                <td>4.215,093</td>
+                                                <td>0,910
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>4</td>
+                                                <td>3</td>
+                                                <td>570,143</td>
+                                                <td>569,104</td>
+                                                <td>564,626</td>
+                                                <td>567,958</td>
+                                                <td>0,427
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>904,987</td>
+                                                <td>976,151</td>
+                                                <td>932,542</td>
+                                                <td>937,893</td>
+                                                <td>0,520
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>4</td>
+                                                <td>9</td>
+                                                <td>2.614,260</td>
+                                                <td>2.553,850</td>
+                                                <td>2.616,850</td>
+                                                <td>2.594,987</td>
+                                                <td>0,508
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>4</td>
+                                                <td>13</td>
+                                                <td>5.460,930</td>
+                                                <td>5.369,810</td>
+                                                <td>5.442,270</td>
+                                                <td>5.424,337</td>
+                                                <td>0,530
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>4</td>
+                                                <td>15</td>
+                                                <td>7.205,540</td>
+                                                <td>7.195,910</td>
+                                                <td>7.081,990</td>
+                                                <td>7.161,147</td>
+                                                <td>0,535
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>8</td>
+                                                <td>3</td>
+                                                <td>549,473</td>
+                                                <td>546,542</td>
+                                                <td>549,591</td>
+                                                <td>548,535</td>
+                                                <td>0,442
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>8</td>
+                                                <td>5</td>
+                                                <td>946,992</td>
+                                                <td>955,347</td>
+                                                <td>937,965</td>
+                                                <td>946,768</td>
+                                                <td>0,516
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>2.590,090</td>
+                                                <td>2.607,200</td>
+                                                <td>2.595,500</td>
+                                                <td>2.597,597</td>
+                                                <td>0,508
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>8</td>
+                                                <td>13</td>
+                                                <td>5.431,830</td>
+                                                <td>5.392,040</td>
+                                                <td>5.391,970</td>
+                                                <td>5.405,280</td>
+                                                <td>0,532
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>8</td>
+                                                <td>15</td>
+                                                <td>7.183,280</td>
+                                                <td>7.169,110</td>
+                                                <td>7.146,300</td>
+                                                <td>7.166,230</td>
+                                                <td>0,535
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>16</td>
+                                                <td>3</td>
+                                                <td>542,130</td>
+                                                <td>537,780</td>
+                                                <td>534,969</td>
+                                                <td>538,293</td>
+                                                <td>0,450
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>16</td>
+                                                <td>5</td>
+                                                <td>933,172</td>
+                                                <td>944,197</td>
+                                                <td>936,552</td>
+                                                <td>937,974</td>
+                                                <td>0,520
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>16</td>
+                                                <td>9</td>
+                                                <td>2.525,570</td>
+                                                <td>2.520,010</td>
+                                                <td>2.533,470</td>
+                                                <td>2.526,350</td>
+                                                <td>0,522
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>16</td>
+                                                <td>13</td>
+                                                <td>5.114,900</td>
+                                                <td>5.144,610</td>
+                                                <td>5.148,570</td>
+                                                <td>5.136,027</td>
+                                                <td>0,560
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1280x720</td>
+                                                <td>16</td>
+                                                <td>15</td>
+                                                <td>6.699,530</td>
+                                                <td>6.695,060</td>
+                                                <td>6.662,620</td>
+                                                <td>6.685,737</td>
+                                                <td>0,573
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>1</td>
+                                                <td>3</td>
+                                                <td>584,783</td>
+                                                <td>536,121</td>
+                                                <td>529,741</td>
+                                                <td>550,215</td>
+                                                <td>0,440
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>1</td>
+                                                <td>5</td>
+                                                <td>1.053,430</td>
+                                                <td>1.048,970</td>
+                                                <td>1.038,740</td>
+                                                <td>1.047,047</td>
+                                                <td>0,466
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>1</td>
+                                                <td>9</td>
+                                                <td>3.003,350</td>
+                                                <td>2.966,180</td>
+                                                <td>2.972,410</td>
+                                                <td>2.980,647</td>
+                                                <td>0,443
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>1</td>
+                                                <td>13</td>
+                                                <td>6.479,610</td>
+                                                <td>6.441,870</td>
+                                                <td>6.468,700</td>
+                                                <td>6.463,393</td>
+                                                <td>0,445
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>1</td>
+                                                <td>15</td>
+                                                <td>8.584,630</td>
+                                                <td>8.588,200</td>
+                                                <td>8.555,780</td>
+                                                <td>8.576,203</td>
+                                                <td>0,447
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>833,927</td>
+                                                <td>839,483</td>
+                                                <td>841,924</td>
+                                                <td>838,445</td>
+                                                <td>0,289
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>2</td>
+                                                <td>5</td>
+                                                <td>1.874,950</td>
+                                                <td>1.276,920</td>
+                                                <td>1.230,700</td>
+                                                <td>1.460,857</td>
+                                                <td>0,334
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>2</td>
+                                                <td>9</td>
+                                                <td>3.779,600</td>
+                                                <td>3.316,170</td>
+                                                <td>3.360,790</td>
+                                                <td>3.485,520</td>
+                                                <td>0,379
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>2</td>
+                                                <td>13</td>
+                                                <td>7.054,590</td>
+                                                <td>7.052,010</td>
+                                                <td>7.069,480</td>
+                                                <td>7.058,693</td>
+                                                <td>0,407
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>2</td>
+                                                <td>15</td>
+                                                <td>9.479,160</td>
+                                                <td>9.244,460</td>
+                                                <td>9.350,570</td>
+                                                <td>9.358,063</td>
+                                                <td>0,410
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>4</td>
+                                                <td>3</td>
+                                                <td>1.224,680</td>
+                                                <td>1.241,620</td>
+                                                <td>1.240,250</td>
+                                                <td>1.235,517</td>
+                                                <td>0,196
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>2.199,420</td>
+                                                <td>2.173,080</td>
+                                                <td>2.203,030</td>
+                                                <td>2.191,843</td>
+                                                <td>0,223
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>4</td>
+                                                <td>9</td>
+                                                <td>5.925,910</td>
+                                                <td>5.815,640</td>
+                                                <td>5.890,430</td>
+                                                <td>5.877,327</td>
+                                                <td>0,224
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>4</td>
+                                                <td>13</td>
+                                                <td>12.280,600</td>
+                                                <td>12.372,900</td>
+                                                <td>12.219,600</td>
+                                                <td>12.291,033</td>
+                                                <td>0,234
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>4</td>
+                                                <td>15</td>
+                                                <td>16.445,900</td>
+                                                <td>16.430,400</td>
+                                                <td>16.545,300</td>
+                                                <td>16.473,867</td>
+                                                <td>0,233
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>8</td>
+                                                <td>3</td>
+                                                <td>1.223,030</td>
+                                                <td>1.218,700</td>
+                                                <td>1.220,870</td>
+                                                <td>1.220,867</td>
+                                                <td>0,198
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>8</td>
+                                                <td>5</td>
+                                                <td>2.174,140</td>
+                                                <td>2.173,850</td>
+                                                <td>2.160,110</td>
+                                                <td>2.169,367</td>
+                                                <td>0,225
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>5.951,290</td>
+                                                <td>5.872,070</td>
+                                                <td>5.987,920</td>
+                                                <td>5.937,093</td>
+                                                <td>0,222
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>8</td>
+                                                <td>13</td>
+                                                <td>12.452,200</td>
+                                                <td>12.540,000</td>
+                                                <td>12.592,600</td>
+                                                <td>12.528,267</td>
+                                                <td>0,229
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>8</td>
+                                                <td>15</td>
+                                                <td>16.660,700</td>
+                                                <td>16.682,200</td>
+                                                <td>16.679,400</td>
+                                                <td>16.674,100</td>
+                                                <td>0,230
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>16</td>
+                                                <td>3</td>
+                                                <td>1.214,270</td>
+                                                <td>1.185,400</td>
+                                                <td>1.190,360</td>
+                                                <td>1.196,677</td>
+                                                <td>0,202
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>16</td>
+                                                <td>5</td>
+                                                <td>2.107,790</td>
+                                                <td>2.117,360</td>
+                                                <td>2.119,390</td>
+                                                <td>2.114,847</td>
+                                                <td>0,231
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>16</td>
+                                                <td>9</td>
+                                                <td>5.713,520</td>
+                                                <td>5.734,510</td>
+                                                <td>5.712,660</td>
+                                                <td>5.720,230</td>
+                                                <td>0,231
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>16</td>
+                                                <td>13</td>
+                                                <td>11.716,000</td>
+                                                <td>11.793,200</td>
+                                                <td>11.820,600</td>
+                                                <td>11.776,600</td>
+                                                <td>0,244
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1920x1080</td>
+                                                <td>16</td>
+                                                <td>15</td>
+                                                <td>15.489,800</td>
+                                                <td>15.502,800</td>
+                                                <td>15.371,300</td>
+                                                <td>15.454,633</td>
+                                                <td>0,248
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>1</td>
+                                                <td>3</td>
+                                                <td>2.354,990</td>
+                                                <td>2.351,230</td>
+                                                <td>2.343,000</td>
+                                                <td>2.349,740</td>
+                                                <td>0,103
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>1</td>
+                                                <td>5</td>
+                                                <td>4.633,430</td>
+                                                <td>4.633,170</td>
+                                                <td>4.631,250</td>
+                                                <td>4.632,617</td>
+                                                <td>0,105
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>1</td>
+                                                <td>9</td>
+                                                <td>13.285,800</td>
+                                                <td>13.448,900</td>
+                                                <td>13.199,300</td>
+                                                <td>13.311,333</td>
+                                                <td>0,099
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>1</td>
+                                                <td>13</td>
+                                                <td>28.796,700</td>
+                                                <td>28.898,100</td>
+                                                <td>28.842,100</td>
+                                                <td>28.845,633</td>
+                                                <td>0,100
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>1</td>
+                                                <td>15</td>
+                                                <td>38.572,000</td>
+                                                <td>38.308,200</td>
+                                                <td>38.373,500</td>
+                                                <td>38.417,900</td>
+                                                <td>0,100
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>3.662,210</td>
+                                                <td>3.662,520</td>
+                                                <td>3.680,620</td>
+                                                <td>3.668,450</td>
+                                                <td>0,066
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>2</td>
+                                                <td>5</td>
+                                                <td>5.525,050</td>
+                                                <td>5.603,340</td>
+                                                <td>5.488,180</td>
+                                                <td>5.538,857</td>
+                                                <td>0,088
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>2</td>
+                                                <td>9</td>
+                                                <td>14.513,200</td>
+                                                <td>14.709,800</td>
+                                                <td>14.672,500</td>
+                                                <td>14.631,833</td>
+                                                <td>0,090
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>2</td>
+                                                <td>13</td>
+                                                <td>32.141,500</td>
+                                                <td>31.278,400</td>
+                                                <td>31.392,800</td>
+                                                <td>31.604,233</td>
+                                                <td>0,091
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>2</td>
+                                                <td>15</td>
+                                                <td>41.724,100</td>
+                                                <td>41.322,700</td>
+                                                <td>41.593,000</td>
+                                                <td>41.546,600</td>
+                                                <td>0,092
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>4</td>
+                                                <td>3</td>
+                                                <td>5.548,640</td>
+                                                <td>5.533,350</td>
+                                                <td>5.622,870</td>
+                                                <td>5.568,287</td>
+                                                <td>0,044
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>4</td>
+                                                <td>5</td>
+                                                <td>9.672,340</td>
+                                                <td>9.762,310</td>
+                                                <td>9.697,280</td>
+                                                <td>9.710,643</td>
+                                                <td>0,050
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>4</td>
+                                                <td>9</td>
+                                                <td>26.481,600</td>
+                                                <td>25.946,400</td>
+                                                <td>26.532,900</td>
+                                                <td>26.320,300</td>
+                                                <td>0,050
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>4</td>
+                                                <td>13</td>
+                                                <td>55.957,600</td>
+                                                <td>55.085,700</td>
+                                                <td>54.942,200</td>
+                                                <td>55.328,500</td>
+                                                <td>0,052
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>4</td>
+                                                <td>15</td>
+                                                <td>72.591,600</td>
+                                                <td>72.655,600</td>
+                                                <td>73.619,100</td>
+                                                <td>72.955,433</td>
+                                                <td>0,053
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>8</td>
+                                                <td>3</td>
+                                                <td>5.503,780</td>
+                                                <td>5.552,730</td>
+                                                <td>5.609,830</td>
+                                                <td>5.555,447</td>
+                                                <td>0,044
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>8</td>
+                                                <td>5</td>
+                                                <td>9.773,490</td>
+                                                <td>9.790,610</td>
+                                                <td>9.797,380</td>
+                                                <td>9.787,160</td>
+                                                <td>0,050
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>8</td>
+                                                <td>9</td>
+                                                <td>27.091,100</td>
+                                                <td>27.463,800</td>
+                                                <td>27.137,900</td>
+                                                <td>27.230,933</td>
+                                                <td>0,048
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>8</td>
+                                                <td>13</td>
+                                                <td>57.380,800</td>
+                                                <td>57.451,400</td>
+                                                <td>57.435,700</td>
+                                                <td>57.422,633</td>
+                                                <td>0,050
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>8</td>
+                                                <td>15</td>
+                                                <td>76.209,600</td>
+                                                <td>76.548,600</td>
+                                                <td>76.456,900</td>
+                                                <td>76.405,033</td>
+                                                <td>0,050
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>16</td>
+                                                <td>3</td>
+                                                <td>5.508,640</td>
+                                                <td>5.600,730</td>
+                                                <td>5.569,400</td>
+                                                <td>5.559,590</td>
+                                                <td>0,044
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>16</td>
+                                                <td>5</td>
+                                                <td>9.805,000</td>
+                                                <td>9.789,290</td>
+                                                <td>9.808,290</td>
+                                                <td>9.800,860</td>
+                                                <td>0,050
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>16</td>
+                                                <td>9</td>
+                                                <td>27.161,700</td>
+                                                <td>27.184,100</td>
+                                                <td>27.192,900</td>
+                                                <td>27.179,567</td>
+                                                <td>0,049
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>16</td>
+                                                <td>13</td>
+                                                <td>57.274,200</td>
+                                                <td>57.364,100</td>
+                                                <td>57.204,600</td>
+                                                <td>57.280,967</td>
+                                                <td>0,050
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3840x2400</td>
+                                                <td>16</td>
+                                                <td>15</td>
+                                                <td>75.494,000</td>
+                                                <td>75.901,800</td>
+                                                <td>75.990,200</td>
+                                                <td>75.795,333</td>
+                                                <td>0,051
+                                                </td>
+                                            </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true,
+            "pageLength": 50
+        });
+    });
+    </script>
+
+</body>
+
+</html>
+
