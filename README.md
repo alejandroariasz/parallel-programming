@@ -7,4 +7,4 @@ The algorithm was tested using the images allocated in the img folder with resol
 
 Check out our WIKI
 
-http://geekcore.co/p/parallelprogramming/pages/index.html
+http://geekcore.co/p/parallelprogramming
