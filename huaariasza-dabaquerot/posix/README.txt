@@ -4,7 +4,7 @@ Before start you need to install OpenCV
 
 https://docs.opencv.org/trunk/d7/d9f/tutorial_linux_install.html
 
-once you have everything installed you can proceed to the compilationas described bellow
+once you have everything installed you can proceed to the compilation as described bellow
 
 g++ -I/usr/local/include/opencv -I/usr/local/include/opencv2 -L/usr/local/lib/ -g -o blur blur-effect.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching -lpthread --std=c++11 
 

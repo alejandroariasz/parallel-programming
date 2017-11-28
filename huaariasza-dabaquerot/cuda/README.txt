@@ -8,7 +8,7 @@ and cuda
 
 http://www.nvidia.es/object/cuda-parallel-computing-es.html
 
-once you have everything installed you can proceed to the compilationas described bellow
+once you have everything installed you can proceed to the compilation as described bellow
 
 make
 
